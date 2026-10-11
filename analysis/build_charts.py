@@ -80,6 +80,19 @@ def base_layout(**overrides) -> dict:
     return layout
 
 
+def tidy(value):
+    """Round floats to 10 significant digits. DuckDB sums in parallel, so the
+    last bits of a total can change from run to run; rounding keeps the
+    committed outputs from churning when nothing real changed."""
+    if isinstance(value, float):
+        return float(f"{value:.10g}")
+    if isinstance(value, list):
+        return [tidy(v) for v in value]
+    if isinstance(value, dict):
+        return {k: tidy(v) for k, v in value.items()}
+    return value
+
+
 def save_chart(chart_id: str, title: str, subtitle: str, figure: dict, table: dict, note: str = "") -> None:
     spec = {
         "id": chart_id,
@@ -89,7 +102,7 @@ def save_chart(chart_id: str, title: str, subtitle: str, figure: dict, table: di
         "figure": figure,
         "table": table,
     }
-    (CHARTS / f"{chart_id}.json").write_text(json.dumps(spec, indent=1))
+    (CHARTS / f"{chart_id}.json").write_text(json.dumps(tidy(spec), indent=1))
 
 
 def pct(value: float, digits: int = 1) -> str:
@@ -735,7 +748,7 @@ def add_narrow_versions() -> None:
         path = CHARTS / f"{chart_id}.json"
         spec = json.loads(path.read_text())
         spec["figure_narrow"] = make(spec["figure"])
-        path.write_text(json.dumps(spec, indent=1))
+        path.write_text(json.dumps(tidy(spec), indent=1))
 
 
 def main() -> None:
@@ -750,7 +763,7 @@ def main() -> None:
         "example_codes": example_codes(con),
     }
     add_narrow_versions()
-    (OUT / "findings.json").write_text(json.dumps(findings, indent=2))
+    (OUT / "findings.json").write_text(json.dumps(tidy(findings), indent=2))
     print(f"Wrote {len(list(CHARTS.glob('*.json')))} charts and findings.json to {OUT}")
 
 

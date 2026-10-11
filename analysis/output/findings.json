@@ -15,51 +15,51 @@
   },
   "bridge_2026": {
     "US": {
-      "net_pct": 1.8723182008634176,
-      "cf_pct": 3.2597035227922624,
-      "work_pct": -0.271687954103324,
-      "pe_pct": -1.0618582468292674,
-      "mp_pct": -0.05383912099625968,
+      "net_pct": 1.872318201,
+      "cf_pct": 3.259703523,
+      "work_pct": -0.2716879541,
+      "pe_pct": -1.061858247,
+      "mp_pct": -0.053839121,
       "gpci_pct": 0.0,
-      "spend_change": 1524691408.588803,
-      "basket_share_of_fee_schedule_dollars": 84.24416527361696
+      "spend_change": 1524691409.0,
+      "basket_share_of_fee_schedule_dollars": 84.24416527
     },
     "GA": {
-      "net_pct": 2.9618907884888794,
-      "cf_pct": 3.259703519151006,
-      "work_pct": -0.3153820079512375,
-      "pe_pct": -0.6731985115160899,
-      "mp_pct": -0.06733846572373485,
-      "gpci_pct": 0.758106310065692,
-      "spend_change": 61331745.89406725,
-      "basket_share_of_fee_schedule_dollars": 85.91820290778566
+      "net_pct": 2.961890788,
+      "cf_pct": 3.259703519,
+      "work_pct": -0.315382008,
+      "pe_pct": -0.6731985115,
+      "mp_pct": -0.06733846572,
+      "gpci_pct": 0.7581063101,
+      "spend_change": 61331745.89,
+      "basket_share_of_fee_schedule_dollars": 85.91820291
     },
     "TN": {
-      "net_pct": 2.723504889815706,
-      "cf_pct": 3.259703521685253,
-      "work_pct": -0.3663169922259055,
-      "pe_pct": -0.7410900207508258,
-      "mp_pct": -0.03074580029485071,
-      "gpci_pct": 0.6019542234692862,
-      "spend_change": 46172576.07599352,
-      "basket_share_of_fee_schedule_dollars": 83.98258100669227
+      "net_pct": 2.72350489,
+      "cf_pct": 3.259703522,
+      "work_pct": -0.3663169922,
+      "pe_pct": -0.7410900208,
+      "mp_pct": -0.03074580029,
+      "gpci_pct": 0.6019542235,
+      "spend_change": 46172576.08,
+      "basket_share_of_fee_schedule_dollars": 83.98258101
     }
   },
   "setting_2026": {
-    "US_non_facility": 6.590282153990851,
-    "US_facility": -6.221942528461834,
-    "TN_non_facility": 7.453781245029553,
-    "TN_facility": -5.751829376053061,
-    "GA_non_facility": 7.231254537419182,
-    "GA_facility": -4.66000203653971
+    "US_non_facility": 6.590282154,
+    "US_facility": -6.221942528,
+    "TN_non_facility": 7.453781245,
+    "TN_facility": -5.751829376,
+    "GA_non_facility": 7.231254537,
+    "GA_facility": -4.660002037
   },
   "efficiency_adjustment": {
     "adjusted_codes": 6704,
     "payable_codes_with_work": 7278
   },
   "local": {
-    "median_dalton_premium_facility": 5.900623909780212,
-    "median_dalton_premium_office": 0.40965967117918556,
+    "median_dalton_premium_facility": 5.90062391,
+    "median_dalton_premium_office": 0.4096596712,
     "mp_gpci_2026": {
       "GA-99": 1.192,
       "TN-35": 0.537
