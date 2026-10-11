@@ -30,7 +30,7 @@ import requests
 CMS = "https://www.cms.gov"
 RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
 CHECKSUMS = Path(__file__).resolve().parent / "checksums.json"
-HEADERS = {"User-Agent": "medicare-pfs-variance (+https://github.com/kiki0053/medicare-pfs-variance)"}
+HEADERS = {"User-Agent": "medicare-pfs-variance (+https://github.com/kiki053/medicare-pfs-variance)"}
 
 # PFS Relative Value Files. The January ("A") release of each year is the fee
 # schedule as it took effect on January 1. 2024 also has a revised January

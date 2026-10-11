@@ -2,7 +2,7 @@
 
 How Medicare's physician fee schedule changed from 2022 to 2026, what drove each year's change in payment, and what it meant for the same services in Chattanooga, Tennessee and Dalton, Georgia. Everything is built from CMS's own public files with Python, dbt, and DuckDB, with a Power BI model on top.
 
-**Write-up with interactive charts:** [kiki0053.github.io/projects/medicare-fee-schedule](https://kiki0053.github.io/projects/medicare-fee-schedule/)
+**Write-up with interactive charts:** [kiki053.github.io/projects/medicare-fee-schedule](https://kiki053.github.io/projects/medicare-fee-schedule/)
 
 ## What I found
 
