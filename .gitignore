@@ -1,0 +1,31 @@
+# Downloaded and intermediate data (rebuilt by the pipeline)
+data/raw/
+data/landing/
+data/*.duckdb
+data/*.duckdb.wal
+
+# dbt
+target/
+logs/
+dbt_packages/
+.user.yml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Power BI working files
+*.pbix.bak
+powerbi/**/.pbi/localSettings.json
+powerbi/**/.pbi/cache.abf
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Power BI exports carry CPT descriptors from dim_code, so they stay local
+powerbi/data/

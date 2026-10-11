@@ -1,0 +1,1016 @@
+{
+ "id": "local_gpci",
+ "title": "Georgia's malpractice adjustment is more than double Tennessee's",
+ "subtitle": "Medicare geographic practice cost indices, 1.000 = national average",
+ "note": "For the same service in a facility, Medicare paid a median 5.9% more in Dalton than in Chattanooga in 2026; in an office, 0.4% more, because Tennessee's higher practice expense index offsets most of the gap.",
+ "figure": {
+  "data": [
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Rest of Georgia (Dalton)",
+    "legendgroup": "GA-99",
+    "showlegend": true,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-1",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Rest of Georgia (Dalton) \u00b7 Work</extra>",
+    "xaxis": "x",
+    "yaxis": "y"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Tennessee (Chattanooga)",
+    "legendgroup": "TN-35",
+    "showlegend": true,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "line": {
+     "color": "role:series-2",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-2",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Tennessee (Chattanooga) \u00b7 Work</extra>",
+    "xaxis": "x",
+    "yaxis": "y"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Rest of Georgia (Dalton)",
+    "legendgroup": "GA-99",
+    "showlegend": false,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     0.878,
+     0.881,
+     0.883,
+     0.883,
+     0.892
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-1",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Rest of Georgia (Dalton) \u00b7 Practice expense</extra>",
+    "xaxis": "x2",
+    "yaxis": "y2"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Tennessee (Chattanooga)",
+    "legendgroup": "TN-35",
+    "showlegend": false,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     0.892,
+     0.894,
+     0.896,
+     0.896,
+     0.909
+    ],
+    "line": {
+     "color": "role:series-2",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-2",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Tennessee (Chattanooga) \u00b7 Practice expense</extra>",
+    "xaxis": "x2",
+    "yaxis": "y2"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Rest of Georgia (Dalton)",
+    "legendgroup": "GA-99",
+    "showlegend": false,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     0.904,
+     1.015,
+     1.125,
+     1.125,
+     1.192
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-1",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Rest of Georgia (Dalton) \u00b7 Malpractice</extra>",
+    "xaxis": "x3",
+    "yaxis": "y3"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Tennessee (Chattanooga)",
+    "legendgroup": "TN-35",
+    "showlegend": false,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     0.492,
+     0.518,
+     0.544,
+     0.544,
+     0.537
+    ],
+    "line": {
+     "color": "role:series-2",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-2",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Tennessee (Chattanooga) \u00b7 Malpractice</extra>",
+    "xaxis": "x3",
+    "yaxis": "y3"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 56,
+    "r": 40,
+    "t": 72,
+    "b": 48
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": false,
+    "zeroline": false,
+    "showline": true,
+    "linecolor": "role:axis",
+    "ticks": "outside",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0.0,
+     0.28
+    ],
+    "anchor": "y",
+    "tickvals": [
+     2022,
+     2024,
+     2026
+    ],
+    "range": [
+     2021.6,
+     2026.9
+    ]
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x",
+    "range": [
+     0.4,
+     1.3
+    ],
+    "dtick": 0.2,
+    "tickformat": ".1f",
+    "showticklabels": true
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.18,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    }
+   },
+   "showlegend": true,
+   "height": 320,
+   "annotations": [
+    {
+     "x": 2024,
+     "y": 1.0,
+     "xref": "x",
+     "yref": "y",
+     "text": "Both held at the 1.000 floor",
+     "showarrow": false,
+     "yshift": 16,
+     "font": {
+      "color": "role:ink-2",
+      "size": 11
+     }
+    },
+    {
+     "text": "<b>Work</b>",
+     "showarrow": false,
+     "xref": "x domain",
+     "yref": "paper",
+     "x": 0,
+     "y": 1.0,
+     "yanchor": "bottom",
+     "xanchor": "left",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    },
+    {
+     "x": 2024,
+     "y": 0.9,
+     "xref": "x2",
+     "yref": "y2",
+     "text": "Within 0.02 of each other",
+     "showarrow": false,
+     "yshift": 18,
+     "font": {
+      "color": "role:ink-2",
+      "size": 11
+     }
+    },
+    {
+     "text": "<b>Practice expense</b>",
+     "showarrow": false,
+     "xref": "x2 domain",
+     "yref": "paper",
+     "x": 0,
+     "y": 1.0,
+     "yanchor": "bottom",
+     "xanchor": "left",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    },
+    {
+     "x": 2026,
+     "y": 1.192,
+     "xref": "x3",
+     "yref": "y3",
+     "text": "1.192",
+     "showarrow": false,
+     "xanchor": "left",
+     "xshift": 8,
+     "font": {
+      "color": "role:ink",
+      "size": 12
+     }
+    },
+    {
+     "x": 2026,
+     "y": 0.537,
+     "xref": "x3",
+     "yref": "y3",
+     "text": "0.537",
+     "showarrow": false,
+     "xanchor": "left",
+     "xshift": 8,
+     "font": {
+      "color": "role:ink",
+      "size": 12
+     }
+    },
+    {
+     "text": "<b>Malpractice</b>",
+     "showarrow": false,
+     "xref": "x3 domain",
+     "yref": "paper",
+     "x": 0,
+     "y": 1.0,
+     "yanchor": "bottom",
+     "xanchor": "left",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    }
+   ],
+   "xaxis2": {
+    "showgrid": false,
+    "zeroline": false,
+    "showline": true,
+    "linecolor": "role:axis",
+    "ticks": "outside",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0.36,
+     0.64
+    ],
+    "anchor": "y2",
+    "tickvals": [
+     2022,
+     2024,
+     2026
+    ],
+    "range": [
+     2021.6,
+     2026.9
+    ]
+   },
+   "yaxis2": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x2",
+    "range": [
+     0.4,
+     1.3
+    ],
+    "dtick": 0.2,
+    "tickformat": ".1f",
+    "showticklabels": false,
+    "matches": "y"
+   },
+   "xaxis3": {
+    "showgrid": false,
+    "zeroline": false,
+    "showline": true,
+    "linecolor": "role:axis",
+    "ticks": "outside",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0.72,
+     1.0
+    ],
+    "anchor": "y3",
+    "tickvals": [
+     2022,
+     2024,
+     2026
+    ],
+    "range": [
+     2021.6,
+     2026.9
+    ]
+   },
+   "yaxis3": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x3",
+    "range": [
+     0.4,
+     1.3
+    ],
+    "dtick": 0.2,
+    "tickformat": ".1f",
+    "showticklabels": false,
+    "matches": "y"
+   }
+  }
+ },
+ "table": {
+  "columns": [
+   "Year",
+   "Work, Dalton",
+   "Work, Chattanooga",
+   "Practice expense, Dalton",
+   "Practice expense, Chattanooga",
+   "Malpractice, Dalton",
+   "Malpractice, Chattanooga"
+  ],
+  "rows": [
+   [
+    "2022",
+    "1.000",
+    "1.000",
+    "0.878",
+    "0.892",
+    "0.904",
+    "0.492"
+   ],
+   [
+    "2023",
+    "1.000",
+    "1.000",
+    "0.881",
+    "0.894",
+    "1.015",
+    "0.518"
+   ],
+   [
+    "2024",
+    "1.000",
+    "1.000",
+    "0.883",
+    "0.896",
+    "1.125",
+    "0.544"
+   ],
+   [
+    "2025",
+    "1.000",
+    "1.000",
+    "0.883",
+    "0.896",
+    "1.125",
+    "0.544"
+   ],
+   [
+    "2026",
+    "1.000",
+    "1.000",
+    "0.892",
+    "0.909",
+    "1.192",
+    "0.537"
+   ]
+  ]
+ },
+ "figure_narrow": {
+  "data": [
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Rest of Georgia (Dalton)",
+    "legendgroup": "GA-99",
+    "showlegend": true,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-1",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Rest of Georgia (Dalton) \u00b7 Work</extra>",
+    "xaxis": "x",
+    "yaxis": "y"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Tennessee (Chattanooga)",
+    "legendgroup": "TN-35",
+    "showlegend": true,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "line": {
+     "color": "role:series-2",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-2",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Tennessee (Chattanooga) \u00b7 Work</extra>",
+    "xaxis": "x",
+    "yaxis": "y"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Rest of Georgia (Dalton)",
+    "legendgroup": "GA-99",
+    "showlegend": false,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     0.878,
+     0.881,
+     0.883,
+     0.883,
+     0.892
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-1",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Rest of Georgia (Dalton) \u00b7 Practice expense</extra>",
+    "xaxis": "x2",
+    "yaxis": "y2"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Tennessee (Chattanooga)",
+    "legendgroup": "TN-35",
+    "showlegend": false,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     0.892,
+     0.894,
+     0.896,
+     0.896,
+     0.909
+    ],
+    "line": {
+     "color": "role:series-2",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-2",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Tennessee (Chattanooga) \u00b7 Practice expense</extra>",
+    "xaxis": "x2",
+    "yaxis": "y2"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Rest of Georgia (Dalton)",
+    "legendgroup": "GA-99",
+    "showlegend": false,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     0.904,
+     1.015,
+     1.125,
+     1.125,
+     1.192
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-1",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Rest of Georgia (Dalton) \u00b7 Malpractice</extra>",
+    "xaxis": "x3",
+    "yaxis": "y3"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Tennessee (Chattanooga)",
+    "legendgroup": "TN-35",
+    "showlegend": false,
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     0.492,
+     0.518,
+     0.544,
+     0.544,
+     0.537
+    ],
+    "line": {
+     "color": "role:series-2",
+     "width": 2
+    },
+    "marker": {
+     "color": "role:series-2",
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     }
+    },
+    "hovertemplate": "%{x}: %{y:.3f}<extra>Tennessee (Chattanooga) \u00b7 Malpractice</extra>",
+    "xaxis": "x3",
+    "yaxis": "y3"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 44,
+    "r": 56,
+    "t": 96,
+    "b": 32
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": false,
+    "zeroline": false,
+    "showline": true,
+    "linecolor": "role:axis",
+    "ticks": "outside",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0,
+     1
+    ],
+    "anchor": "y",
+    "tickvals": [
+     2022,
+     2024,
+     2026
+    ],
+    "range": [
+     2021.6,
+     2026.9
+    ],
+    "showticklabels": false
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x",
+    "range": [
+     0.4,
+     1.3
+    ],
+    "dtick": 0.2,
+    "tickformat": ".1f",
+    "showticklabels": true,
+    "domain": [
+     0.72,
+     1.0
+    ]
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.1,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    }
+   },
+   "showlegend": true,
+   "height": 620,
+   "annotations": [
+    {
+     "x": 2024,
+     "y": 1.0,
+     "xref": "x",
+     "yref": "y",
+     "text": "Both held at the 1.000 floor",
+     "showarrow": false,
+     "yshift": 16,
+     "font": {
+      "color": "role:ink-2",
+      "size": 11
+     }
+    },
+    {
+     "text": "<b>Work</b>",
+     "showarrow": false,
+     "xref": "x domain",
+     "yref": "y domain",
+     "x": 0,
+     "y": 1.0,
+     "yanchor": "bottom",
+     "xanchor": "left",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    },
+    {
+     "x": 2024,
+     "y": 0.9,
+     "xref": "x2",
+     "yref": "y2",
+     "text": "Within 0.02 of each other",
+     "showarrow": false,
+     "yshift": 18,
+     "font": {
+      "color": "role:ink-2",
+      "size": 11
+     }
+    },
+    {
+     "text": "<b>Practice expense</b>",
+     "showarrow": false,
+     "xref": "x2 domain",
+     "yref": "y2 domain",
+     "x": 0,
+     "y": 1.0,
+     "yanchor": "bottom",
+     "xanchor": "left",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    },
+    {
+     "x": 2026,
+     "y": 1.192,
+     "xref": "x3",
+     "yref": "y3",
+     "text": "1.192",
+     "showarrow": false,
+     "xanchor": "left",
+     "xshift": 8,
+     "font": {
+      "color": "role:ink",
+      "size": 12
+     }
+    },
+    {
+     "x": 2026,
+     "y": 0.537,
+     "xref": "x3",
+     "yref": "y3",
+     "text": "0.537",
+     "showarrow": false,
+     "xanchor": "left",
+     "xshift": 8,
+     "font": {
+      "color": "role:ink",
+      "size": 12
+     }
+    },
+    {
+     "text": "<b>Malpractice</b>",
+     "showarrow": false,
+     "xref": "x3 domain",
+     "yref": "y3 domain",
+     "x": 0,
+     "y": 1.0,
+     "yanchor": "bottom",
+     "xanchor": "left",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    }
+   ],
+   "xaxis2": {
+    "showgrid": false,
+    "zeroline": false,
+    "showline": true,
+    "linecolor": "role:axis",
+    "ticks": "outside",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0,
+     1
+    ],
+    "anchor": "y2",
+    "tickvals": [
+     2022,
+     2024,
+     2026
+    ],
+    "range": [
+     2021.6,
+     2026.9
+    ],
+    "showticklabels": false
+   },
+   "yaxis2": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x2",
+    "range": [
+     0.4,
+     1.3
+    ],
+    "dtick": 0.2,
+    "tickformat": ".1f",
+    "showticklabels": true,
+    "matches": "y",
+    "domain": [
+     0.36,
+     0.64
+    ]
+   },
+   "xaxis3": {
+    "showgrid": false,
+    "zeroline": false,
+    "showline": true,
+    "linecolor": "role:axis",
+    "ticks": "outside",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0,
+     1
+    ],
+    "anchor": "y3",
+    "tickvals": [
+     2022,
+     2024,
+     2026
+    ],
+    "range": [
+     2021.6,
+     2026.9
+    ]
+   },
+   "yaxis3": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x3",
+    "range": [
+     0.4,
+     1.3
+    ],
+    "dtick": 0.2,
+    "tickformat": ".1f",
+    "showticklabels": true,
+    "matches": "y",
+    "domain": [
+     0.0,
+     0.28
+    ]
+   }
+  }
+ }
+}

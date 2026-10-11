@@ -1,0 +1,296 @@
+{
+ "id": "setting_split",
+ "title": "Office services gained about 7%; facility services lost 5 to 6%",
+ "subtitle": "Change in payment from 2025 to 2026 rates on 2024 Medicare volume, by where the service was performed",
+ "note": "CMS cut the indirect practice expense it assigns to facility-based services in 2026, reasoning that physicians employed by hospitals don't carry separate office costs.",
+ "figure": {
+  "data": [
+   {
+    "type": "bar",
+    "orientation": "h",
+    "name": "Office (non-facility)",
+    "y": [
+     "National",
+     "Tennessee",
+     "Georgia"
+    ],
+    "x": [
+     6.590282153990851,
+     7.453781245029553,
+     7.231254537419182
+    ],
+    "marker": {
+     "color": "role:series-1",
+     "cornerradius": 4
+    },
+    "text": [
+     "+6.6%",
+     "+7.5%",
+     "+7.2%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "hovertemplate": "%{y}, office (non-facility): %{x:+.2f}%<extra></extra>"
+   },
+   {
+    "type": "bar",
+    "orientation": "h",
+    "name": "Facility",
+    "y": [
+     "National",
+     "Tennessee",
+     "Georgia"
+    ],
+    "x": [
+     -6.221942528461834,
+     -5.751829376053061,
+     -4.66000203653971
+    ],
+    "marker": {
+     "color": "role:series-2",
+     "cornerradius": 4
+    },
+    "text": [
+     "\u22126.2%",
+     "\u22125.8%",
+     "\u22124.7%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "hovertemplate": "%{y}, facility: %{x:+.2f}%<extra></extra>"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 88,
+    "r": 48,
+    "t": 24,
+    "b": 48
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": true,
+    "zeroline": true,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "ticksuffix": "%",
+    "range": [
+     -9.5,
+     11
+    ],
+    "dtick": 3,
+    "gridcolor": "role:grid",
+    "zerolinecolor": "role:axis",
+    "zerolinewidth": 1
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "showgrid": false,
+    "autorange": "reversed",
+    "ticks": ""
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.08,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    },
+    "traceorder": "normal"
+   },
+   "showlegend": true,
+   "height": 300,
+   "barmode": "group",
+   "bargap": 0.42,
+   "bargroupgap": 0.08
+  }
+ },
+ "table": {
+  "columns": [
+   "Geography",
+   "Office (non-facility)",
+   "Facility"
+  ],
+  "rows": [
+   [
+    "National",
+    "+6.59%",
+    "\u22126.22%"
+   ],
+   [
+    "Tennessee",
+    "+7.45%",
+    "\u22125.75%"
+   ],
+   [
+    "Georgia",
+    "+7.23%",
+    "\u22124.66%"
+   ]
+  ]
+ },
+ "figure_narrow": {
+  "data": [
+   {
+    "type": "bar",
+    "orientation": "h",
+    "name": "Office (non-facility)",
+    "y": [
+     "National",
+     "Tennessee",
+     "Georgia"
+    ],
+    "x": [
+     6.590282153990851,
+     7.453781245029553,
+     7.231254537419182
+    ],
+    "marker": {
+     "color": "role:series-1",
+     "cornerradius": 4
+    },
+    "text": [
+     "+6.6%",
+     "+7.5%",
+     "+7.2%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "hovertemplate": "%{y}, office (non-facility): %{x:+.2f}%<extra></extra>"
+   },
+   {
+    "type": "bar",
+    "orientation": "h",
+    "name": "Facility",
+    "y": [
+     "National",
+     "Tennessee",
+     "Georgia"
+    ],
+    "x": [
+     -6.221942528461834,
+     -5.751829376053061,
+     -4.66000203653971
+    ],
+    "marker": {
+     "color": "role:series-2",
+     "cornerradius": 4
+    },
+    "text": [
+     "\u22126.2%",
+     "\u22125.8%",
+     "\u22124.7%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "hovertemplate": "%{y}, facility: %{x:+.2f}%<extra></extra>"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 80,
+    "r": 40,
+    "t": 64,
+    "b": 48
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": true,
+    "zeroline": true,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "ticksuffix": "%",
+    "range": [
+     -13,
+     12.5
+    ],
+    "dtick": 4,
+    "gridcolor": "role:grid",
+    "zerolinecolor": "role:axis",
+    "zerolinewidth": 1
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "showgrid": false,
+    "autorange": "reversed",
+    "ticks": ""
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.04,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    },
+    "traceorder": "normal"
+   },
+   "showlegend": true,
+   "height": 300,
+   "barmode": "group",
+   "bargap": 0.42,
+   "bargroupgap": 0.08
+  }
+ }
+}

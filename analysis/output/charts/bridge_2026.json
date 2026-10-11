@@ -1,0 +1,841 @@
+{
+ "id": "bridge_2026",
+ "title": "2026's net raise is smaller than the conversion factor bump",
+ "subtitle": "What drove the 2025 to 2026 payment change, as a share of 2025 payments, holding 2024 Medicare service volume fixed",
+ "note": "Covers codes with one price per setting, about 84 to 86% of 2024 allowed dollars for services paid from the fee schedule; codes billed in separate professional and technical pieces are left out. Georgia's statewide volume is priced at Rest of Georgia rates, the locality that includes Dalton.",
+ "figure": {
+  "data": [
+   {
+    "type": "waterfall",
+    "orientation": "h",
+    "name": "National",
+    "y": [
+     "Conversion factor",
+     "Work RVUs",
+     "Practice expense",
+     "Malpractice",
+     "Geographic index",
+     "Net change"
+    ],
+    "x": [
+     3.2597035227922624,
+     -0.271687954103324,
+     -1.0618582468292674,
+     -0.05383912099625968,
+     0.0,
+     1.8723182008634176
+    ],
+    "measure": [
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "total"
+    ],
+    "text": [
+     "+3.3%",
+     "\u22120.3%",
+     "\u22121.1%",
+     "\u22120.1%",
+     "No adjustment",
+     "+1.9%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "increasing": {
+     "marker": {
+      "color": "role:up"
+     }
+    },
+    "decreasing": {
+     "marker": {
+      "color": "role:down"
+     }
+    },
+    "totals": {
+     "marker": {
+      "color": "role:total"
+     }
+    },
+    "connector": {
+     "line": {
+      "color": "role:axis",
+      "width": 1
+     }
+    },
+    "width": 0.56,
+    "hovertemplate": "%{y}: %{x:+.2f}% of 2025 payments<extra>National</extra>",
+    "xaxis": "x",
+    "yaxis": "y"
+   },
+   {
+    "type": "waterfall",
+    "orientation": "h",
+    "name": "Tennessee",
+    "y": [
+     "Conversion factor",
+     "Work RVUs",
+     "Practice expense",
+     "Malpractice",
+     "Geographic index",
+     "Net change"
+    ],
+    "x": [
+     3.259703521685253,
+     -0.3663169922259055,
+     -0.7410900207508258,
+     -0.03074580029485071,
+     0.6019542234692862,
+     2.723504889815706
+    ],
+    "measure": [
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "total"
+    ],
+    "text": [
+     "+3.3%",
+     "\u22120.4%",
+     "\u22120.7%",
+     "\u22120.03%",
+     "+0.6%",
+     "+2.7%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "increasing": {
+     "marker": {
+      "color": "role:up"
+     }
+    },
+    "decreasing": {
+     "marker": {
+      "color": "role:down"
+     }
+    },
+    "totals": {
+     "marker": {
+      "color": "role:total"
+     }
+    },
+    "connector": {
+     "line": {
+      "color": "role:axis",
+      "width": 1
+     }
+    },
+    "width": 0.56,
+    "hovertemplate": "%{y}: %{x:+.2f}% of 2025 payments<extra>Tennessee</extra>",
+    "xaxis": "x2",
+    "yaxis": "y2"
+   },
+   {
+    "type": "waterfall",
+    "orientation": "h",
+    "name": "Georgia",
+    "y": [
+     "Conversion factor",
+     "Work RVUs",
+     "Practice expense",
+     "Malpractice",
+     "Geographic index",
+     "Net change"
+    ],
+    "x": [
+     3.259703519151006,
+     -0.3153820079512375,
+     -0.6731985115160899,
+     -0.06733846572373485,
+     0.758106310065692,
+     2.9618907884888794
+    ],
+    "measure": [
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "total"
+    ],
+    "text": [
+     "+3.3%",
+     "\u22120.3%",
+     "\u22120.7%",
+     "\u22120.1%",
+     "+0.8%",
+     "+3.0%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "increasing": {
+     "marker": {
+      "color": "role:up"
+     }
+    },
+    "decreasing": {
+     "marker": {
+      "color": "role:down"
+     }
+    },
+    "totals": {
+     "marker": {
+      "color": "role:total"
+     }
+    },
+    "connector": {
+     "line": {
+      "color": "role:axis",
+      "width": 1
+     }
+    },
+    "width": 0.56,
+    "hovertemplate": "%{y}: %{x:+.2f}% of 2025 payments<extra>Georgia</extra>",
+    "xaxis": "x3",
+    "yaxis": "y3"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 132,
+    "r": 40,
+    "t": 36,
+    "b": 40
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": true,
+    "zeroline": false,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0.0,
+     0.27
+    ],
+    "anchor": "y",
+    "range": [
+     0,
+     4.4
+    ],
+    "dtick": 1,
+    "ticksuffix": "%",
+    "gridcolor": "role:grid"
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x",
+    "autorange": "reversed",
+    "showgrid": false,
+    "showticklabels": true,
+    "ticks": ""
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.08,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    }
+   },
+   "showlegend": false,
+   "height": 330,
+   "annotations": [
+    {
+     "text": "<b>National</b>",
+     "showarrow": false,
+     "xref": "x domain",
+     "yref": "paper",
+     "x": 0,
+     "y": 1.0,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    },
+    {
+     "text": "<b>Tennessee</b>",
+     "showarrow": false,
+     "xref": "x2 domain",
+     "yref": "paper",
+     "x": 0,
+     "y": 1.0,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    },
+    {
+     "text": "<b>Georgia</b>",
+     "showarrow": false,
+     "xref": "x3 domain",
+     "yref": "paper",
+     "x": 0,
+     "y": 1.0,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     }
+    }
+   ],
+   "xaxis2": {
+    "showgrid": true,
+    "zeroline": false,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0.365,
+     0.635
+    ],
+    "anchor": "y2",
+    "range": [
+     0,
+     4.4
+    ],
+    "dtick": 1,
+    "ticksuffix": "%",
+    "gridcolor": "role:grid",
+    "matches": "x"
+   },
+   "yaxis2": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x2",
+    "autorange": "reversed",
+    "showgrid": false,
+    "showticklabels": false,
+    "ticks": "",
+    "matches": "y"
+   },
+   "xaxis3": {
+    "showgrid": true,
+    "zeroline": false,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0.73,
+     1.0
+    ],
+    "anchor": "y3",
+    "range": [
+     0,
+     4.4
+    ],
+    "dtick": 1,
+    "ticksuffix": "%",
+    "gridcolor": "role:grid",
+    "matches": "x"
+   },
+   "yaxis3": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x3",
+    "autorange": "reversed",
+    "showgrid": false,
+    "showticklabels": false,
+    "ticks": "",
+    "matches": "y"
+   }
+  }
+ },
+ "table": {
+  "columns": [
+   "Geography",
+   "Conversion factor",
+   "Work RVUs",
+   "Practice expense",
+   "Malpractice",
+   "Geographic (GPCI)",
+   "Net change"
+  ],
+  "rows": [
+   [
+    "National",
+    "+3.26%",
+    "\u22120.27%",
+    "\u22121.06%",
+    "\u22120.05%",
+    "No adjustment",
+    "+1.87%"
+   ],
+   [
+    "Tennessee",
+    "+3.26%",
+    "\u22120.37%",
+    "\u22120.74%",
+    "\u22120.03%",
+    "+0.60%",
+    "+2.72%"
+   ],
+   [
+    "Georgia",
+    "+3.26%",
+    "\u22120.32%",
+    "\u22120.67%",
+    "\u22120.07%",
+    "+0.76%",
+    "+2.96%"
+   ]
+  ]
+ },
+ "figure_narrow": {
+  "data": [
+   {
+    "type": "waterfall",
+    "orientation": "h",
+    "name": "National",
+    "y": [
+     "Conversion factor",
+     "Work RVUs",
+     "Practice expense",
+     "Malpractice",
+     "Geographic index",
+     "Net change"
+    ],
+    "x": [
+     3.2597035227922624,
+     -0.271687954103324,
+     -1.0618582468292674,
+     -0.05383912099625968,
+     0.0,
+     1.8723182008634176
+    ],
+    "measure": [
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "total"
+    ],
+    "text": [
+     "+3.3%",
+     "\u22120.3%",
+     "\u22121.1%",
+     "\u22120.1%",
+     "No adjustment",
+     "+1.9%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "increasing": {
+     "marker": {
+      "color": "role:up"
+     }
+    },
+    "decreasing": {
+     "marker": {
+      "color": "role:down"
+     }
+    },
+    "totals": {
+     "marker": {
+      "color": "role:total"
+     }
+    },
+    "connector": {
+     "line": {
+      "color": "role:axis",
+      "width": 1
+     }
+    },
+    "width": 0.56,
+    "hovertemplate": "%{y}: %{x:+.2f}% of 2025 payments<extra>National</extra>",
+    "xaxis": "x",
+    "yaxis": "y"
+   },
+   {
+    "type": "waterfall",
+    "orientation": "h",
+    "name": "Tennessee",
+    "y": [
+     "Conversion factor",
+     "Work RVUs",
+     "Practice expense",
+     "Malpractice",
+     "Geographic index",
+     "Net change"
+    ],
+    "x": [
+     3.259703521685253,
+     -0.3663169922259055,
+     -0.7410900207508258,
+     -0.03074580029485071,
+     0.6019542234692862,
+     2.723504889815706
+    ],
+    "measure": [
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "total"
+    ],
+    "text": [
+     "+3.3%",
+     "\u22120.4%",
+     "\u22120.7%",
+     "\u22120.03%",
+     "+0.6%",
+     "+2.7%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "increasing": {
+     "marker": {
+      "color": "role:up"
+     }
+    },
+    "decreasing": {
+     "marker": {
+      "color": "role:down"
+     }
+    },
+    "totals": {
+     "marker": {
+      "color": "role:total"
+     }
+    },
+    "connector": {
+     "line": {
+      "color": "role:axis",
+      "width": 1
+     }
+    },
+    "width": 0.56,
+    "hovertemplate": "%{y}: %{x:+.2f}% of 2025 payments<extra>Tennessee</extra>",
+    "xaxis": "x2",
+    "yaxis": "y2"
+   },
+   {
+    "type": "waterfall",
+    "orientation": "h",
+    "name": "Georgia",
+    "y": [
+     "Conversion factor",
+     "Work RVUs",
+     "Practice expense",
+     "Malpractice",
+     "Geographic index",
+     "Net change"
+    ],
+    "x": [
+     3.259703519151006,
+     -0.3153820079512375,
+     -0.6731985115160899,
+     -0.06733846572373485,
+     0.758106310065692,
+     2.9618907884888794
+    ],
+    "measure": [
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "relative",
+     "total"
+    ],
+    "text": [
+     "+3.3%",
+     "\u22120.3%",
+     "\u22120.7%",
+     "\u22120.1%",
+     "+0.8%",
+     "+3.0%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "increasing": {
+     "marker": {
+      "color": "role:up"
+     }
+    },
+    "decreasing": {
+     "marker": {
+      "color": "role:down"
+     }
+    },
+    "totals": {
+     "marker": {
+      "color": "role:total"
+     }
+    },
+    "connector": {
+     "line": {
+      "color": "role:axis",
+      "width": 1
+     }
+    },
+    "width": 0.56,
+    "hovertemplate": "%{y}: %{x:+.2f}% of 2025 payments<extra>Georgia</extra>",
+    "xaxis": "x3",
+    "yaxis": "y3"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 124,
+    "r": 48,
+    "t": 28,
+    "b": 32
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": true,
+    "zeroline": false,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0,
+     1
+    ],
+    "anchor": "y",
+    "range": [
+     0,
+     4.4
+    ],
+    "dtick": 1,
+    "ticksuffix": "%",
+    "gridcolor": "role:grid"
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x",
+    "autorange": "reversed",
+    "showgrid": false,
+    "showticklabels": true,
+    "ticks": "",
+    "domain": [
+     0.71,
+     1.0
+    ]
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.08,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    }
+   },
+   "showlegend": false,
+   "height": 680,
+   "annotations": [
+    {
+     "text": "<b>National</b>",
+     "showarrow": false,
+     "xref": "x domain",
+     "yref": "y domain",
+     "x": 0,
+     "y": 1.0,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     },
+     "xshift": -120
+    },
+    {
+     "text": "<b>Tennessee</b>",
+     "showarrow": false,
+     "xref": "x2 domain",
+     "yref": "y2 domain",
+     "x": 0,
+     "y": 1.0,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     },
+     "xshift": -120
+    },
+    {
+     "text": "<b>Georgia</b>",
+     "showarrow": false,
+     "xref": "x3 domain",
+     "yref": "y3 domain",
+     "x": 0,
+     "y": 1.0,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "font": {
+      "color": "role:ink",
+      "size": 13
+     },
+     "xshift": -120
+    }
+   ],
+   "xaxis2": {
+    "showgrid": true,
+    "zeroline": false,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0,
+     1
+    ],
+    "anchor": "y2",
+    "range": [
+     0,
+     4.4
+    ],
+    "dtick": 1,
+    "ticksuffix": "%",
+    "gridcolor": "role:grid",
+    "matches": "x"
+   },
+   "yaxis2": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x2",
+    "autorange": "reversed",
+    "showgrid": false,
+    "showticklabels": true,
+    "ticks": "",
+    "matches": "y",
+    "domain": [
+     0.355,
+     0.645
+    ]
+   },
+   "xaxis3": {
+    "showgrid": true,
+    "zeroline": false,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "domain": [
+     0,
+     1
+    ],
+    "anchor": "y3",
+    "range": [
+     0,
+     4.4
+    ],
+    "dtick": 1,
+    "ticksuffix": "%",
+    "gridcolor": "role:grid",
+    "matches": "x"
+   },
+   "yaxis3": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "anchor": "x3",
+    "autorange": "reversed",
+    "showgrid": false,
+    "showticklabels": true,
+    "ticks": "",
+    "matches": "y",
+    "domain": [
+     0.0,
+     0.29
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: mart_payment_variance
+    description: >
+      Year-over-year payment change per code, locality, and setting, split
+      into conversion factor, RVU (work, PE, MP), and GPCI effects that add
+      up to the total change.
+    columns:
+      - name: variance_key
+        data_tests: [unique, not_null]
+
+  - name: mart_volume_weighted_change
+    description: >
+      The same changes priced on a fixed basket of 2024 Medicare service
+      counts for the nation, Tennessee, and Georgia.
+    columns:
+      - name: volume_change_key
+        data_tests: [unique, not_null]
+      - name: geography
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["US", "TN", "GA"]
+
+  - name: mart_efficiency_adjustment
+    description: Codes under the CY 2026 efficiency adjustment, with before/after work RVUs and national volume.
+    columns:
+      - name: code_key
+        data_tests: [unique, not_null]
+
+  - name: mart_local_comparison
+    description: Payment for the same code and setting in each focus locality, side by side.
+    columns:
+      - name: comparison_key
+        data_tests: [unique, not_null]

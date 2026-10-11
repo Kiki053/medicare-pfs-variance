@@ -1,0 +1,60 @@
+name: pipeline
+
+# Rebuilds everything from CMS's files and runs the dbt tests. The monthly run
+# re-downloads every file, so a CMS repost shows up as a checksum note or a
+# failing test instead of going unnoticed.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - "powerbi/**"
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 9 1 * *"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore CMS downloads
+        if: github.event_name != 'schedule'
+        uses: actions/cache@v5
+        with:
+          path: data/raw
+          key: cms-raw-${{ hashFiles('ingest/download_cms.py', 'ingest/checksums.json') }}
+
+      - name: Download CMS files
+        run: python ingest/download_cms.py ${{ github.event_name == 'schedule' && '--force' || '' }}
+
+      - name: Land files as Parquet
+        run: python ingest/land_files.py
+
+      - name: Build models and run tests
+        run: dbt build
+
+      - name: Build chart specs and findings
+        run: python analysis/build_charts.py
+
+      - name: Upload findings
+        uses: actions/upload-artifact@v6
+        with:
+          name: findings
+          path: analysis/output/

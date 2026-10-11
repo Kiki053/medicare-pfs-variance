@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_pprrvu
+    description: Typed relative value rows, one per code x modifier x release x conversion factor track.
+    columns:
+      - name: release_id
+        data_tests: [not_null]
+      - name: hcpcs
+        data_tests: [not_null]
+      - name: cf_track
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["single", "non_qp", "qp"]
+
+  - name: stg_gpci
+    description: Typed GPCIs, one row per locality x release.
+    columns:
+      - name: state
+        data_tests: [not_null]
+      - name: pw_gpci
+        data_tests: [not_null]
+
+  - name: stg_efficiency_adjustment
+    description: Codes CMS listed under the CY 2026 efficiency adjustment.
+    columns:
+      - name: hcpcs
+        data_tests: [not_null]
+
+  - name: stg_efficiency_exclusions
+    description: Codes exempt from the CY 2026 efficiency adjustment.
+    columns:
+      - name: hcpcs
+        data_tests: [unique, not_null]
+
+  - name: stg_utilization_2024
+    description: 2024 Medicare service counts for the nation, Georgia, and Tennessee.
+    columns:
+      - name: geography
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["US", "GA", "TN"]
+      - name: setting
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["facility", "non_facility"]

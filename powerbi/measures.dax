@@ -1,0 +1,109 @@
+// Measures for the Medicare PFS variance report.
+//
+// To add them all at once: open DAX query view in Power BI Desktop, paste this
+// file, and choose "Update model with changes" above the DEFINE block. Every
+// measure lands in the 'Measures' table (create it first; see BUILD_GUIDE.md).
+// Then set each measure's format from the table in the guide.
+
+DEFINE
+    // ---------- Conversion factor (dim_release, filtered by 'Year') ----------
+    MEASURE 'Measures'[Conversion factor] =
+        CALCULATE ( MAX ( dim_release[conversion_factor] ), dim_release[is_primary] = TRUE () )
+    MEASURE 'Measures'[Conversion factor, QP] =
+        CALCULATE ( MAX ( dim_release[conversion_factor_qp] ), dim_release[is_primary] = TRUE () )
+    MEASURE 'Measures'[Conversion factor change %] =
+        VAR CurrentYear = SELECTEDVALUE ( 'Year'[Year] )
+        VAR PriorFactor = CALCULATE ( [Conversion factor], 'Year'[Year] = CurrentYear - 1 )
+        RETURN
+            DIVIDE ( [Conversion factor] - PriorFactor, PriorFactor )
+
+    // ---------- Payment (fct_payment) ----------
+    MEASURE 'Measures'[Payment] = SUM ( fct_payment[payment_amount] )
+    MEASURE 'Measures'[Payment, QP] = SUM ( fct_payment[payment_amount_qp] )
+    MEASURE 'Measures'[Work amount] = SUM ( fct_payment[work_amount] )
+    MEASURE 'Measures'[PE amount] = SUM ( fct_payment[pe_amount] )
+    MEASURE 'Measures'[MP amount] = SUM ( fct_payment[mp_amount] )
+
+    // ---------- Year-over-year change per code (mart_payment_variance) ----------
+    // 'Year' filters the current year of each comparison.
+    MEASURE 'Measures'[Prior payment] = SUM ( mart_payment_variance[prior_payment] )
+    MEASURE 'Measures'[Current payment] = SUM ( mart_payment_variance[current_payment] )
+    MEASURE 'Measures'[Payment change] = SUM ( mart_payment_variance[payment_change] )
+    MEASURE 'Measures'[Payment change %] = DIVIDE ( [Payment change], [Prior payment] )
+    MEASURE 'Measures'[CF effect] = SUM ( mart_payment_variance[cf_effect] )
+    MEASURE 'Measures'[Work RVU effect] = SUM ( mart_payment_variance[work_rvu_effect] )
+    MEASURE 'Measures'[PE RVU effect] = SUM ( mart_payment_variance[pe_rvu_effect] )
+    MEASURE 'Measures'[MP RVU effect] = SUM ( mart_payment_variance[mp_rvu_effect] )
+    MEASURE 'Measures'[GPCI effect] = SUM ( mart_payment_variance[gpci_effect] )
+    // Should always be zero: the five effects add up to the change exactly.
+    MEASURE 'Measures'[Bridge check] =
+        [Payment change]
+            - ( [CF effect] + [Work RVU effect] + [PE RVU effect] + [MP RVU effect] + [GPCI effect] )
+
+    // ---------- Volume-weighted change (mart_volume_weighted_change) ----------
+    // A fixed basket: 2024 Medicare services priced at each year's rates.
+    MEASURE 'Measures'[Services 2024] = SUM ( mart_volume_weighted_change[services_2024] )
+    MEASURE 'Measures'[Prior spend] = SUM ( mart_volume_weighted_change[prior_spend] )
+    MEASURE 'Measures'[Current spend] = SUM ( mart_volume_weighted_change[current_spend] )
+    MEASURE 'Measures'[Spend change] = SUM ( mart_volume_weighted_change[spend_change] )
+    MEASURE 'Measures'[Spend change %] = DIVIDE ( [Spend change], [Prior spend] )
+    MEASURE 'Measures'[CF effect, pts] =
+        DIVIDE ( SUM ( mart_volume_weighted_change[cf_effect] ), [Prior spend] )
+    MEASURE 'Measures'[Work RVU effect, pts] =
+        DIVIDE ( SUM ( mart_volume_weighted_change[work_rvu_effect] ), [Prior spend] )
+    MEASURE 'Measures'[PE RVU effect, pts] =
+        DIVIDE ( SUM ( mart_volume_weighted_change[pe_rvu_effect] ), [Prior spend] )
+    MEASURE 'Measures'[MP RVU effect, pts] =
+        DIVIDE ( SUM ( mart_volume_weighted_change[mp_rvu_effect] ), [Prior spend] )
+    MEASURE 'Measures'[GPCI effect, pts] =
+        DIVIDE ( SUM ( mart_volume_weighted_change[gpci_effect] ), [Prior spend] )
+    // One measure for the waterfall: the category comes from 'Bridge step'.
+    MEASURE 'Measures'[Bridge effect, pts] =
+        SWITCH (
+            SELECTEDVALUE ( 'Bridge step'[Step] ),
+            "Conversion factor", [CF effect, pts],
+            "Work RVUs", [Work RVU effect, pts],
+            "Practice expense", [PE RVU effect, pts],
+            "Malpractice", [MP RVU effect, pts],
+            "Geographic index", [GPCI effect, pts]
+        )
+
+    // ---------- Dalton vs Chattanooga (mart_local_comparison) ----------
+    MEASURE 'Measures'[Tennessee payment] = SUM ( mart_local_comparison[tennessee_payment] )
+    MEASURE 'Measures'[Rest of Georgia payment] = SUM ( mart_local_comparison[rest_of_georgia_payment] )
+    MEASURE 'Measures'[Atlanta payment] = SUM ( mart_local_comparison[atlanta_payment] )
+    MEASURE 'Measures'[Dalton minus Chattanooga] = SUM ( mart_local_comparison[dalton_minus_chattanooga] )
+    MEASURE 'Measures'[Dalton premium %] = DIVIDE ( [Dalton minus Chattanooga], [Tennessee payment] )
+    // Matches the write-up: global codes only, one value per code.
+    MEASURE 'Measures'[Median Dalton premium %] =
+        MEDIANX (
+            FILTER (
+                mart_local_comparison,
+                mart_local_comparison[modifier] = ""
+                    && mart_local_comparison[tennessee_payment] > 0
+            ),
+            DIVIDE ( mart_local_comparison[rest_of_georgia_payment], mart_local_comparison[tennessee_payment] ) - 1
+        )
+
+    // ---------- Geographic indexes (dim_locality) ----------
+    MEASURE 'Measures'[Work GPCI] = AVERAGE ( dim_locality[pw_gpci] )
+    MEASURE 'Measures'[PE GPCI] = AVERAGE ( dim_locality[pe_gpci] )
+    MEASURE 'Measures'[MP GPCI] = AVERAGE ( dim_locality[mp_gpci] )
+
+    // ---------- CY 2026 efficiency adjustment (mart_efficiency_adjustment) ----------
+    MEASURE 'Measures'[Adjusted codes] = COUNTROWS ( mart_efficiency_adjustment )
+    MEASURE 'Measures'[Services on adjusted codes, 2024] =
+        SUM ( mart_efficiency_adjustment[national_services_2024] )
+    MEASURE 'Measures'[Average work RVU change %] =
+        AVERAGE ( mart_efficiency_adjustment[cms_work_rvu_change_pct] )
+
+// A quick check once the measures are in: 2026 change by locality.
+// National should read about +1.87%, Tennessee +2.72%, Rest of Georgia +2.96%.
+EVALUATE
+SUMMARIZECOLUMNS (
+    'Locality'[Locality],
+    TREATAS ( { 2026 }, 'Year'[Year] ),
+    "Spend change %", [Spend change %],
+    "CF effect, pts", [CF effect, pts],
+    "PE RVU effect, pts", [PE RVU effect, pts]
+)

@@ -1,0 +1,34 @@
+name: medicare_pfs_variance
+version: "1.0.0"
+config-version: 2
+profile: medicare_pfs_variance
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  # Medicare localities this project zooms in on. Chattanooga sits in the
+  # Tennessee statewide locality; Dalton (Whitfield County) sits in Rest of
+  # Georgia. Atlanta is kept as an in-state contrast.
+  focus_localities: ["US-00", "TN-35", "GA-99", "GA-01"]
+  # PFS status codes that are paid from the fee schedule:
+  # A = active, R = restricted coverage, T = paid only if no other service
+  # is billed that day.
+  payable_status_codes: ["A", "R", "T"]
+
+models:
+  medicare_pfs_variance:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+    analysis:
+      +materialized: table
+
+seeds:
+  medicare_pfs_variance:
+    +column_types:
+      calendar_year: integer

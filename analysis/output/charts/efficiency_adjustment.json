@@ -1,0 +1,393 @@
+{
+ "id": "efficiency_adjustment",
+ "title": "The 2.5% efficiency cut hit procedures, not office visits",
+ "subtitle": "Share of 2024 Medicare services in each code family billed on codes CMS listed for the CY 2026 efficiency adjustment",
+ "note": "Time-based services (E/M visits, care management, behavioral health), telehealth-list services, and new 2026 codes were exempt. Families under 1 million services are omitted.",
+ "figure": {
+  "data": [
+   {
+    "type": "bar",
+    "orientation": "h",
+    "x": [
+     0.0,
+     20.710182500215346,
+     33.45315685404289,
+     99.18004979700352,
+     99.81928501505267,
+     99.9948524481812
+    ],
+    "y": [
+     "Evaluation and management",
+     "HCPCS Level II",
+     "Medicine",
+     "Radiology",
+     "Pathology and lab",
+     "Surgery"
+    ],
+    "marker": {
+     "color": "role:series-1",
+     "cornerradius": 4
+    },
+    "width": 0.5,
+    "text": [
+     "0%, exempt as time-based",
+     "21%",
+     "33%",
+     "99%",
+     "100%",
+     "100%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "customdata": [
+     [
+      391.55246989999995
+     ],
+     [
+      56.763724800000006
+     ],
+     [
+      380.076853
+     ],
+     [
+      119.3850549
+     ],
+     [
+      35.4087958
+     ],
+     [
+      121.45579529999999
+     ]
+    ],
+    "hovertemplate": "%{y}: %{x:.1f}% of %{customdata[0]:.1f}M services<extra></extra>"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 196,
+    "r": 48,
+    "t": 24,
+    "b": 48
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": true,
+    "zeroline": false,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "ticksuffix": "%",
+    "range": [
+     0,
+     112
+    ],
+    "dtick": 25,
+    "gridcolor": "role:grid"
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "showgrid": false,
+    "ticks": ""
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.08,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    }
+   },
+   "showlegend": false,
+   "height": 300
+  }
+ },
+ "table": {
+  "columns": [
+   "Code family",
+   "2024 services",
+   "Share on adjusted codes",
+   "Adjusted codes"
+  ],
+  "rows": [
+   [
+    "Surgery",
+    "121.5M",
+    "100.0%",
+    "4,715 of 4,732"
+   ],
+   [
+    "Pathology and lab",
+    "35.4M",
+    "99.8%",
+    "68 of 72"
+   ],
+   [
+    "Radiology",
+    "119.4M",
+    "99.2%",
+    "509 of 511"
+   ],
+   [
+    "Medicine",
+    "380.1M",
+    "33.5%",
+    "386 of 595"
+   ],
+   [
+    "HCPCS Level II",
+    "56.8M",
+    "20.7%",
+    "42 of 121"
+   ],
+   [
+    "Evaluation and management",
+    "391.6M",
+    "0.0%",
+    "0 of 84"
+   ]
+  ]
+ },
+ "figure_narrow": {
+  "data": [
+   {
+    "type": "bar",
+    "orientation": "h",
+    "x": [
+     0.0,
+     20.710182500215346,
+     33.45315685404289,
+     99.18004979700352,
+     99.81928501505267,
+     99.9948524481812
+    ],
+    "y": [
+     "Evaluation and management",
+     "HCPCS Level II",
+     "Medicine",
+     "Radiology",
+     "Pathology and lab",
+     "Surgery"
+    ],
+    "marker": {
+     "color": "role:series-1",
+     "cornerradius": 4
+    },
+    "width": 0.38,
+    "text": [
+     "0%, exempt as time-based",
+     "21%",
+     "33%",
+     "99%",
+     "100%",
+     "100%"
+    ],
+    "textposition": "outside",
+    "textfont": {
+     "color": "role:ink",
+     "size": 12
+    },
+    "cliponaxis": false,
+    "customdata": [
+     [
+      391.55246989999995
+     ],
+     [
+      56.763724800000006
+     ],
+     [
+      380.076853
+     ],
+     [
+      119.3850549
+     ],
+     [
+      35.4087958
+     ],
+     [
+      121.45579529999999
+     ]
+    ],
+    "hovertemplate": "%{y}: %{x:.1f}% of %{customdata[0]:.1f}M services<extra></extra>"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 16,
+    "r": 16,
+    "t": 8,
+    "b": 48
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": true,
+    "zeroline": false,
+    "showline": false,
+    "linecolor": "role:axis",
+    "ticks": "",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "ticksuffix": "%",
+    "range": [
+     0,
+     118
+    ],
+    "dtick": 50,
+    "gridcolor": "role:grid"
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "showgrid": false,
+    "ticks": "",
+    "showticklabels": false
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.08,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    }
+   },
+   "showlegend": false,
+   "height": 400,
+   "annotations": [
+    {
+     "x": 0,
+     "y": "Evaluation and management",
+     "xref": "x",
+     "yref": "y",
+     "text": "Evaluation and management",
+     "showarrow": false,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "yshift": 13,
+     "font": {
+      "color": "role:ink-2",
+      "size": 12
+     }
+    },
+    {
+     "x": 0,
+     "y": "HCPCS Level II",
+     "xref": "x",
+     "yref": "y",
+     "text": "HCPCS Level II",
+     "showarrow": false,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "yshift": 13,
+     "font": {
+      "color": "role:ink-2",
+      "size": 12
+     }
+    },
+    {
+     "x": 0,
+     "y": "Medicine",
+     "xref": "x",
+     "yref": "y",
+     "text": "Medicine",
+     "showarrow": false,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "yshift": 13,
+     "font": {
+      "color": "role:ink-2",
+      "size": 12
+     }
+    },
+    {
+     "x": 0,
+     "y": "Radiology",
+     "xref": "x",
+     "yref": "y",
+     "text": "Radiology",
+     "showarrow": false,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "yshift": 13,
+     "font": {
+      "color": "role:ink-2",
+      "size": 12
+     }
+    },
+    {
+     "x": 0,
+     "y": "Pathology and lab",
+     "xref": "x",
+     "yref": "y",
+     "text": "Pathology and lab",
+     "showarrow": false,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "yshift": 13,
+     "font": {
+      "color": "role:ink-2",
+      "size": 12
+     }
+    },
+    {
+     "x": 0,
+     "y": "Surgery",
+     "xref": "x",
+     "yref": "y",
+     "text": "Surgery",
+     "showarrow": false,
+     "xanchor": "left",
+     "yanchor": "bottom",
+     "yshift": 13,
+     "font": {
+      "color": "role:ink-2",
+      "size": 12
+     }
+    }
+   ]
+  }
+ }
+}

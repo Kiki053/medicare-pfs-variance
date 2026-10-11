@@ -1,0 +1,7 @@
+release_id,calendar_year,release_label,is_primary,note
+RVU22A,2022,January 2022,true,
+RVU23A,2023,January 2023,true,
+RVU24A,2024,January 2024 (original),false,"Conversion factor $32.7442; applied January 1 to March 8, 2024"
+RVU24AR,2024,January 2024 (revised),true,"Conversion factor $33.2875 after the Consolidated Appropriations Act, 2024; applied March 9 to December 31, 2024"
+RVU25A,2025,January 2025,true,
+RVU26A,2026,January 2026,true,"First year with separate conversion factors for qualifying APM participants and everyone else"

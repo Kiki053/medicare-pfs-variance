@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: dim_release
+    description: One row per CMS release, with its conversion factors.
+    columns:
+      - name: release_id
+        data_tests: [unique, not_null]
+      - name: conversion_factor
+        description: The conversion factor for everyone who isn't a qualifying APM participant (the only one before 2026).
+        data_tests: [not_null]
+      - name: conversion_factor_qp
+        description: The conversion factor for qualifying APM participants (equals conversion_factor before 2026).
+        data_tests: [not_null]
+
+  - name: dim_code
+    description: One row per HCPCS code x modifier, labeled with its CPT section.
+    columns:
+      - name: code_key
+        description: HCPCS code, plus "-" and the modifier when there is one (e.g. 71046-26).
+        data_tests: [unique, not_null]
+      - name: code_family
+        data_tests: [not_null]
+
+  - name: dim_locality
+    description: >
+      One row per Medicare locality per year. GPCIs change every year, so
+      the year is part of the key. US-00 is a national row with every GPCI at 1.
+    columns:
+      - name: locality_year_key
+        data_tests: [unique, not_null]
+      - name: pw_gpci
+        description: Work GPCI with the 1.0 floor Congress applies (the value used for payment).
+      - name: pw_gpci_no_floor
+        description: Work GPCI before the floor; CMS published it only for 2026.
+
+  - name: fct_rvu
+    description: "Grain: one row per HCPCS code x modifier x calendar year (primary release)."
+    columns:
+      - name: rvu_key
+        data_tests: [unique, not_null]
+      - name: code_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_code')
+                field: code_key
+
+  - name: fct_payment
+    description: "Grain: one row per code x modifier x year x focus locality x setting, payable services only."
+    columns:
+      - name: payment_key
+        data_tests: [unique, not_null]
+      - name: setting
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["non_facility", "facility"]
+      - name: payment_amount
+        description: Medicare fee schedule amount at the non-QP conversion factor, before beneficiary cost sharing.
+        data_tests: [not_null]
+      - name: rvu_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('fct_rvu')
+                field: rvu_key
+      - name: locality_year_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_locality')
+                field: locality_year_key

@@ -1,0 +1,491 @@
+{
+ "id": "conversion_factor",
+ "title": "The conversion factor fell three years running, then rose in 2026",
+ "subtitle": "Medicare physician fee schedule conversion factor, dollars per RVU",
+ "note": "2024 shows the $33.2875 rate paid from March 9 to December 31; January 1 to March 8 paid $32.7442. 2027 is CMS's July 2026 proposal and may change in the final rule.",
+ "figure": {
+  "data": [
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Everyone else",
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     34.6062,
+     33.8872,
+     33.2875,
+     32.3465,
+     33.4009
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2
+    },
+    "marker": {
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     },
+     "color": "role:series-1"
+    },
+    "hovertemplate": "%{x}: $%{y:.4f} per RVU<extra>Everyone else</extra>"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Everyone else, proposed",
+    "x": [
+     2026,
+     2027
+    ],
+    "y": [
+     33.4009,
+     32.8409
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2,
+     "dash": "dot"
+    },
+    "marker": {
+     "size": 10,
+     "line": {
+      "color": "role:series-1",
+      "width": 2
+     },
+     "color": [
+      "role:series-1",
+      "role:surface"
+     ]
+    },
+    "hovertemplate": "%{x} proposed: $%{y:.4f}<extra>Everyone else</extra>",
+    "showlegend": false
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Qualifying APM participants",
+    "x": [
+     2026,
+     2027
+    ],
+    "y": [
+     33.5675,
+     33.1693
+    ],
+    "line": {
+     "color": "role:series-2",
+     "width": 2,
+     "dash": "dot"
+    },
+    "marker": {
+     "size": 10,
+     "line": {
+      "color": "role:series-2",
+      "width": 2
+     },
+     "color": [
+      "role:series-2",
+      "role:surface"
+     ]
+    },
+    "hovertemplate": "%{x}: $%{y:.4f}<extra>Qualifying APM participants</extra>"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 56,
+    "r": 64,
+    "t": 24,
+    "b": 48
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": false,
+    "zeroline": false,
+    "showline": true,
+    "linecolor": "role:axis",
+    "ticks": "outside",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "tickmode": "array",
+    "tickvals": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026,
+     2027
+    ],
+    "ticktext": [
+     "2022",
+     "2023",
+     "2024",
+     "2025",
+     "2026",
+     "2027<br>proposed"
+    ],
+    "range": [
+     2021.6,
+     2027.5
+    ]
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "tickprefix": "$",
+    "tickformat": ".0f",
+    "range": [
+     31.5,
+     35.5
+    ],
+    "dtick": 1
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.08,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    }
+   },
+   "showlegend": true,
+   "height": 340,
+   "annotations": [
+    {
+     "x": 2022,
+     "y": 34.6062,
+     "text": "$34.61",
+     "showarrow": false,
+     "yshift": 16,
+     "font": {
+      "color": "role:ink"
+     }
+    },
+    {
+     "x": 2027,
+     "y": 33.1693,
+     "text": "$33.17",
+     "showarrow": false,
+     "xanchor": "left",
+     "xshift": 10,
+     "font": {
+      "color": "role:ink"
+     }
+    },
+    {
+     "x": 2027,
+     "y": 32.8409,
+     "text": "$32.84",
+     "showarrow": false,
+     "xanchor": "left",
+     "xshift": 10,
+     "font": {
+      "color": "role:ink"
+     }
+    },
+    {
+     "x": 2025,
+     "y": 32.3465,
+     "text": "$32.35",
+     "showarrow": false,
+     "yshift": -18,
+     "font": {
+      "color": "role:ink"
+     }
+    }
+   ]
+  }
+ },
+ "table": {
+  "columns": [
+   "Year",
+   "Everyone else",
+   "Qualifying APM participants",
+   "Status"
+  ],
+  "rows": [
+   [
+    "2022",
+    "$34.6062",
+    "same",
+    "Final"
+   ],
+   [
+    "2023",
+    "$33.8872",
+    "same",
+    "Final"
+   ],
+   [
+    "2024",
+    "$33.2875",
+    "same",
+    "Final"
+   ],
+   [
+    "2025",
+    "$32.3465",
+    "same",
+    "Final"
+   ],
+   [
+    "2026",
+    "$33.4009",
+    "$33.5675",
+    "Final"
+   ],
+   [
+    "2027",
+    "$32.8409",
+    "$33.1693",
+    "Proposed (July 2026)"
+   ]
+  ]
+ },
+ "figure_narrow": {
+  "data": [
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Everyone else",
+    "x": [
+     2022,
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "y": [
+     34.6062,
+     33.8872,
+     33.2875,
+     32.3465,
+     33.4009
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2
+    },
+    "marker": {
+     "size": 10,
+     "line": {
+      "color": "role:surface",
+      "width": 2
+     },
+     "color": "role:series-1"
+    },
+    "hovertemplate": "%{x}: $%{y:.4f} per RVU<extra>Everyone else</extra>"
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Everyone else, proposed",
+    "x": [
+     2026,
+     2027
+    ],
+    "y": [
+     33.4009,
+     32.8409
+    ],
+    "line": {
+     "color": "role:series-1",
+     "width": 2,
+     "dash": "dot"
+    },
+    "marker": {
+     "size": 10,
+     "line": {
+      "color": "role:series-1",
+      "width": 2
+     },
+     "color": [
+      "role:series-1",
+      "role:surface"
+     ]
+    },
+    "hovertemplate": "%{x} proposed: $%{y:.4f}<extra>Everyone else</extra>",
+    "showlegend": false
+   },
+   {
+    "type": "scatter",
+    "mode": "lines+markers",
+    "name": "Qualifying APM participants",
+    "x": [
+     2026,
+     2027
+    ],
+    "y": [
+     33.5675,
+     33.1693
+    ],
+    "line": {
+     "color": "role:series-2",
+     "width": 2,
+     "dash": "dot"
+    },
+    "marker": {
+     "size": 10,
+     "line": {
+      "color": "role:series-2",
+      "width": 2
+     },
+     "color": [
+      "role:series-2",
+      "role:surface"
+     ]
+    },
+    "hovertemplate": "%{x}: $%{y:.4f}<extra>Qualifying APM participants</extra>"
+   }
+  ],
+  "layout": {
+   "font": {
+    "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "size": 13,
+    "color": "role:ink-2"
+   },
+   "paper_bgcolor": "role:surface",
+   "plot_bgcolor": "role:surface",
+   "margin": {
+    "l": 44,
+    "r": 56,
+    "t": 64,
+    "b": 48
+   },
+   "hoverlabel": {
+    "bgcolor": "role:surface",
+    "bordercolor": "role:axis",
+    "font": {
+     "family": "system-ui, -apple-system, \"Segoe UI\", sans-serif",
+     "color": "role:ink"
+    }
+   },
+   "xaxis": {
+    "showgrid": false,
+    "zeroline": false,
+    "showline": true,
+    "linecolor": "role:axis",
+    "ticks": "outside",
+    "tickcolor": "role:axis",
+    "fixedrange": true,
+    "tickmode": "array",
+    "tickvals": [
+     2022,
+     2024,
+     2026,
+     2027
+    ],
+    "ticktext": [
+     "2022",
+     "2024",
+     "2026",
+     "2027<br>proposed"
+    ],
+    "range": [
+     2021.6,
+     2027.5
+    ],
+    "tickangle": 0
+   },
+   "yaxis": {
+    "gridcolor": "role:grid",
+    "gridwidth": 1,
+    "zeroline": false,
+    "showline": false,
+    "fixedrange": true,
+    "tickprefix": "$",
+    "tickformat": ".0f",
+    "range": [
+     31.5,
+     35.5
+    ],
+    "dtick": 1
+   },
+   "legend": {
+    "orientation": "h",
+    "x": 0,
+    "y": 1.04,
+    "xanchor": "left",
+    "yanchor": "bottom",
+    "font": {
+     "color": "role:ink-2"
+    }
+   },
+   "showlegend": true,
+   "height": 320,
+   "annotations": [
+    {
+     "x": 2022,
+     "y": 34.6062,
+     "text": "$34.61",
+     "showarrow": false,
+     "yshift": 12,
+     "font": {
+      "color": "role:ink"
+     },
+     "xanchor": "left",
+     "xshift": 8
+    },
+    {
+     "x": 2027,
+     "y": 33.1693,
+     "text": "$33.17",
+     "showarrow": false,
+     "xanchor": "left",
+     "xshift": 10,
+     "font": {
+      "color": "role:ink"
+     }
+    },
+    {
+     "x": 2027,
+     "y": 32.8409,
+     "text": "$32.84",
+     "showarrow": false,
+     "xanchor": "left",
+     "xshift": 10,
+     "font": {
+      "color": "role:ink"
+     }
+    },
+    {
+     "x": 2025,
+     "y": 32.3465,
+     "text": "$32.35",
+     "showarrow": false,
+     "yshift": -18,
+     "font": {
+      "color": "role:ink"
+     }
+    }
+   ]
+  }
+ }
+}

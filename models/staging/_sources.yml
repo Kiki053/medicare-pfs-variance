@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: landing
+    description: >
+      CMS files after ingest/land_files.py has rebuilt their headers. Every
+      column arrives as text; the staging models type and clean them.
+    meta:
+      external_location: "data/landing/{name}.parquet"
+    tables:
+      - name: pprrvu
+        description: >
+          Physician Fee Schedule relative value file (PPRRVU), one row per
+          HCPCS code and modifier per release. 2026 arrives twice: once for
+          qualifying APM participants (cf_track = qp) and once for everyone
+          else (cf_track = non_qp).
+      - name: gpci
+        description: Geographic practice cost indices by Medicare locality and year.
+      - name: efficiency_adjustment_2026
+        description: Codes CMS listed as subject to the CY 2026 efficiency adjustment, with work RVUs before and after.
+      - name: efficiency_exclusions_2026
+        description: Codes CMS exempted from the CY 2026 efficiency adjustment.
+      - name: utilization_geo_2024
+        description: >
+          Medicare Physician & Other Practitioners by Geography and Service,
+          2024 data year. Services, beneficiaries, and average payments by
+          HCPCS code, geography, and place of service (F = facility,
+          O = office/non-facility).

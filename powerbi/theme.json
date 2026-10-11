@@ -1,0 +1,44 @@
+{
+  "name": "Medicare PFS variance",
+  "dataColors": [
+    "#2A78D6",
+    "#EB6834",
+    "#1BAF7A",
+    "#898781",
+    "#23668F",
+    "#E34948",
+    "#4A565E",
+    "#C3C7C2"
+  ],
+  "foreground": "#1C262D",
+  "background": "#FFFFFF",
+  "tableAccent": "#23668F",
+  "good": "#2A78D6",
+  "neutral": "#898781",
+  "bad": "#E34948",
+  "maximum": "#23668F",
+  "center": "#F6F7F5",
+  "minimum": "#E34948",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 28,
+      "color": "#1C262D"
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13,
+      "color": "#1C262D"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 11,
+      "color": "#1C262D"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#4A565E"
+    }
+  }
+}
