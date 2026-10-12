@@ -109,6 +109,8 @@ In Model view, create these relationships. All are one-to-many with a single fil
 
 No fact table connects to another fact table, and `dim_release` and `dim_locality` hang off `Year` and `Locality` rather than the facts, so every filter has exactly one path. `Year` filters `mart_payment_variance` and `mart_volume_weighted_change` on the *current* year of each comparison: selecting 2026 shows the change from 2025 to 2026.
 
+Power BI proposes **One to one** for `mart_efficiency_adjustment`, because both of its `code_key` columns are unique. Change that one to **Many to one** with a **Single** direction.
+
 Hide the key columns on the many side so report authors pick fields from the dimensions.
 
 ## 5. Add the measures
